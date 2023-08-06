@@ -19,5 +19,7 @@ RUN : \
     && :
 RUN : \
     && pip install chroma-hnswlib \
+    && :
+RUN : \
     && pip install chromadb \
     && :
