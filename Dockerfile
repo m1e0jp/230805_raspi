@@ -15,6 +15,8 @@ RUN : \
     && rm -rf /var/cache \
     && :
 RUN : \
-    && pip install chromadb==0.3.29 \
     && pip install streamlit \
+    && :
+RUN : \
+    && pip install chromadb \
     && :
