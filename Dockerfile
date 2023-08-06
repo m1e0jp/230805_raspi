@@ -18,6 +18,6 @@ RUN : \
     && pip install streamlit \
     && :
 RUN : \
-    && pip install chromadb-hnswlib \
+    && pip install chroma-hnswlib \
     && pip install chromadb \
     && :
