@@ -17,3 +17,10 @@ RUN : \
 RUN : \
     && pip install streamlit \
     && :
+RUN : \
+    && apt install -y language-pack-ja-base language-pack-ja locales \
+    && locale-gen ja_JP.UTF-8 \
+    && echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc \ 
+    && source ~/.bashrc \
+    && :
+    
