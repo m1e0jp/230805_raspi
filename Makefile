@@ -7,9 +7,14 @@ ifndef HOST_PWD
   HOST_PWD:=$(shell pwd)
 endif
 
+%: //always-true
+	: $@
+
+.PHONY: //build
 //build:
 	podman image build --tag localhost/230805_raspi:1 .
 
+.PHONY: //run
 //run:
 	podman run -it --rm --mount type=bind,source="sample",destination="/sample" -e=DISPLAY --net=host localhost/230805_raspi:1 .
 
