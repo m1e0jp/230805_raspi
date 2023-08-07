@@ -12,7 +12,7 @@ endif
 
 .PHONY: //build
 //build:
-	podman image build --tag localhost/230805_raspi:1
+	podman image build --tag localhost/230805_raspi:1 .
 
 .PHONY: //run
 //run:
