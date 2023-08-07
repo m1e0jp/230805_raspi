@@ -12,11 +12,11 @@ endif
 
 .PHONY: //build
 //build:
-	podman image build --tag localhost/230805_raspi:1 .
+	podman image build --tag localhost/230805_raspi:1
 
 .PHONY: //run
 //run:
-	podman run -it --rm --mount type=bind,source="sample",destination="/sample" -e=DISPLAY --net=host localhost/230805_raspi:1 .
+	podman run -it --rm --mount type=bind,source="sample",destination="/sample" -e=DISPLAY -e OPENAI_API_KEY="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" --net=host localhost/230805_raspi:1
 
 //always-true:
 #:          //always-true
