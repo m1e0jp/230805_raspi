@@ -13,3 +13,6 @@ RUN : \
     && apt clean all \
     && rm -rf /var/cache/* \
     && :
+RUN : \
+    && pip install bs4 \
+    && :
