@@ -31,7 +31,8 @@ endif
 //pi:
 	podman run -it --rm \
 	  --mount type=bind,source="$(HOST_PWD)",destination="/my" \
-	  --mount type=bind,source="/tmp/pulseaudio.socket",destination="/tmp/pulseaudio.socket" \
+	  --mount type=bind,source="/run/user/$(shell id -u)/pulse/native",destination="/tmp/pulseaudio.socket" \
+	  --mount type=bind,source="/home/$(shell whoami)/.config/pulse/cookie",destination="/tmp/pulseaudio.cookie" \
 	  --mount type=bind,source="/tmp/pulseaudio.client.conf",destination="/etc/pulse/client.conf" \
 	  --mount type=bind,source="/tmp/.X11-unix",destination="/tmp/.X11-unix" \
 	  -e=DISPLAY \
