@@ -19,7 +19,7 @@
     cd julius-4.6
     ls -l
     pwd
-    CFLAGS='-O3' ./configure $option
+    CFLAGS='-O3 -I/usr/include -L/usr/lib' ./configure $option
     make
     sudo make install
 )
