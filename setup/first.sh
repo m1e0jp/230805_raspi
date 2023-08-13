@@ -14,6 +14,8 @@
         exit 1
     fi
 
+    pwd
+    ls -l
     cd my/julius
     CFLAG='-O3' ./configure $option
     make
