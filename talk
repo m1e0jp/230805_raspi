@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 aplay -q <(open_jtalk \
-             -m /my/MMDAgent_Example-1.7/mei_normal.htsvoice \
+             -m /my/MMDAgent_Example-1.7/Voice/mei/mei_normal.htsvoice \
              -x /var/lib/mecab/dic/open-jtalk/naist-jdic \
              -ow /dev/stdout \
              <<<"$1"

@@ -38,8 +38,6 @@ rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
     fi
 
     cd my/julius
-    ls *.tgz | xargs -n1 tar zxf 
-    cd julius-4.6
     CFLAG='-O3' ./configure $option
     make
     sudo make install
