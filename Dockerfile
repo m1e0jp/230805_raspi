@@ -2,15 +2,13 @@
 
 FROM ubuntu:22.04
 
+ENV LANG=ja_JP.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
+RUN apt-get install -y language-pack-ja-base language-pack-ja
 RUN apt-get install -y pip
 RUN pip install chromadb==0.3.29
 
-RUN apt-get update \
-    && apt-get install -y locales \
-    && locale-gen ja_JP.UTF-8 \
-    && echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 
 RUN apt-get install -y sudo build-essential gcc-arm-linux-gnueabihf     alsa-utils pulseaudio fcitx-mozc fonts-ipafont python3-pil.imagetk
 RUN pip install customtkinter langchain openai bs4 tiktoken
