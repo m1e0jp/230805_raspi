@@ -17,14 +17,14 @@ endif
 
 //go:
 	podman run -it --rm \
-	  --mount type=bind,source="sample",destination="/sample" \
+	  --mount type=bind,source="$(HOST_PWD)",destination="/my" \
 	  --mount type=bind,source="/mnt/wslg",destination="/mnt/wslg" \
 	  --mount type=bind,source="/tmp/.X11-unix",destination="/tmp/.X11-unix" \
 	  -e=DISPLAY \
 	  -e=PULSE_SERVER \
 	  -e=WAYLAND_DISPLAY \
 	  -e=XDG_RUNTIME_DIR \
-	  -e OPENAI_API_KEY="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" \
+	  -e OPENAI_API_KEY="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" \
 	  --net=host \
 	  localhost/230805_raspi:1
 
