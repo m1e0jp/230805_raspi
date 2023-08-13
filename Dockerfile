@@ -16,7 +16,7 @@ RUN pip install customtkinter langchain openai bs4 tiktoken
 RUN apt-get install -y open-jtalk open-jtalk-mecab-naist-jdic hts-voice-nitech-jp-atr503-m001
 RUN apt-get install -y alsa-utils
 RUN apt-get install -y pulseaudio
-RUN apt-get install -y zlib1g-dev libsdl2-dev libpulse-dev
+RUN apt-get install -y zlib1g-dev libsdl2-dev libasound2-dev libpulse-dev
 RUN apt-get autoremove -y 
 RUN apt-get clean all
 RUN rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
