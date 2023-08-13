@@ -44,3 +44,5 @@ rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
     make
     sudo make install
 )
+
+:
