@@ -28,6 +28,19 @@ endif
 	  --net=host \
 	  localhost/230805_raspi:1
 
+//pi:
+	podman run -it --rm \
+	  --mount type=bind,source="$(HOST_PWD)",destination="/my" \
+	  --mount type=bind,source="/tmp/pulseaudio.socket",destination="/tmp/pulseaudio.socket" \
+	  --mount type=bind,source="/tmp/pulseaudio.client.conf",destination="/etc/pulse/client.conf" \
+	  --mount type=bind,source="/tmp/.X11-unix",destination="/tmp/.X11-unix" \
+	  -e=DISPLAY \
+	  -e PULSE_SERVER=/tmp/pulseaudio.socket \
+	  -e PULSE_COOKIE=/tmp/pulseaudio.cookie \
+	  -e OPENAI_API_KEY="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" \
+	  --net=host \
+	  localhost/230805_raspi:1
+
 //setup:
 	@julius -version >/dev/null 2>&1 || $(MAKE) //julius
 	[ -f dictation-kit-v4.3.1/main.jconf ] || $(MAKE) //dictation-kit
