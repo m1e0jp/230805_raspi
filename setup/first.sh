@@ -37,7 +37,7 @@ rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
         exit 1
     fi
 
-    cd /julius
+    cd my/julius
     ls *.tgz | xargs -n1 tar zxf 
     cd julius-4.6
     CFLAG='-O3' ./configure $option
