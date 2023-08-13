@@ -24,7 +24,7 @@ endif
 	  -e=PULSE_SERVER \
 	  -e=WAYLAND_DISPLAY \
 	  -e=XDG_RUNTIME_DIR \
-	  -e OPENAI_API_KEY="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" \
+	  -e OPENAI_API_KEY="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" \
 	  --net=host \
 	  localhost/230805_raspi:1
 
