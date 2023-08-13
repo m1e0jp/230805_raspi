@@ -14,6 +14,7 @@
         exit 1
     fi
 
+    cd setup
     tar zxf julius-v4.6.tar.gz
     cd julius-4.6
     CFLAG='-O3' ./configure $option
