@@ -23,5 +23,5 @@ RUN rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
 
 
 COPY setup/ setup/
-ENV CC=arm-linux-gnueabihf-gcc
+#ENV CC=arm-linux-gnueabihf-gcc
 RUN . setup/first.sh
