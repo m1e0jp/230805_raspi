@@ -17,8 +17,6 @@
     cd setup
     tar zxf julius-v4.6.tar.gz
     cd julius-4.6
-    ls -l
-    pwd
     CFLAGS='-O3 -I/usr/include -L/usr/lib' ./configure $option
     make
     sudo make install
