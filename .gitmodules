@@ -1,0 +1,9 @@
+[submodule "julius"]
+	path = julius
+	url = https://github.com/julius-speech/julius
+[submodule "dictation-kit"]
+	path = dictation-kit
+	url = https://github.com/julius-speech/dictation-kit
+[submodule "grammar-kit"]
+	path = grammar-kit
+	url = https://github.com/julius-speech/grammar-kit
