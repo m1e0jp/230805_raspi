@@ -15,7 +15,10 @@ apt-get update
 #pip install customtkinter langchain openai tiktoken streamlit bs4
 
 
-apt-get install -y --no-install-recommends sudo build-essential gcc-arm-linux-gnueabihf pip alsa-utils pulseaudio fcitx-mozc fonts-ipafont
+#apt-get install -y --no-install-recommends sudo build-essential gcc-arm-linux-gnueabihf pip alsa-utils pulseaudio fcitx-mozc fonts-ipafont
+ apt-get install -y                         sudo build-essential gcc-arm-linux-gnueabihf pip alsa-utils pulseaudio fcitx-mozc fonts-ipafont
+
+
 apt-get autoremove -y 
 apt-get clean all
 pip install customtkinter langchain openai
