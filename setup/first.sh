@@ -14,9 +14,8 @@
         exit 1
     fi
 
-    pwd
-    ls -l
-    cd my/julius
+    tar zxf julius-v4.6.tar.gz
+    cd julius-4.6
     CFLAG='-O3' ./configure $option
     make
     sudo make install

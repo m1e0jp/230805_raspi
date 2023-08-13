@@ -22,4 +22,4 @@ RUN rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
 
 
 COPY setup/ setup/
-RUN . ./setup/first.sh
+RUN cd setup/ && . first.sh
