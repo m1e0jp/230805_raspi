@@ -7,3 +7,6 @@
 [submodule "grammar-kit"]
 	path = grammar-kit
 	url = https://github.com/julius-speech/grammar-kit
+[submodule "toll_ai"]
+	path = toll_ai
+	url = https://github.com/SEC-Online-Boot-Camp/toll_ai
