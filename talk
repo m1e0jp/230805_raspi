@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-aplay -q <(open_jtalk \
-             -m MMDAgent_Example-1.7/Voice/mei/mei_normal.htsvoice \
-             -x /var/lib/mecab/dic/open-jtalk/naist-jdic \
-             -ow /dev/stdout \
-             <<<"$1"
-          )
+aplay -q <( \
+   open_jtalk \
+      -m tohoku-f01-neutral.htsvoice \
+      -x /var/lib/mecab/dic/open-jtalk/naist-jdic \
+      -ow /dev/stdout \
+      <<<"$1" \
+)
