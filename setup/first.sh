@@ -6,7 +6,7 @@
 (
     cpu="$(uname -m)"
     if [ "$cpu" = 'aarch64' ]; then
-        option="--build=arm --host=arm-linux-gnueabihf --with-mictype=pulseaudio"
+        option="--build=aarch64 --with-mictype=pulseaudio"
     elif [ "$cpu" = 'x86_64' ]; then
         option=""
     else
@@ -17,7 +17,7 @@
     cd setup
     tar zxf julius-v4.6.tar.gz
     cd julius-4.6
-    CFLAGS='-O3 -I/usr/include -L/usr/lib' ./configure $option
+    CFLAGS='-O6' ./configure $option
     make
     sudo make install
 )
