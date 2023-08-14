@@ -21,7 +21,15 @@ RUN apt-get autoremove -y
 RUN apt-get clean all
 RUN rm -rf /var/cache/* /usr/local/src/* ~/.cache/pip
 
-
 COPY setup/ setup/
-#ENV CC=arm-linux-gnueabihf-gcc
 RUN . setup/first.sh
+
+#230815
+RUN im-config -n fcitx
+ENV GTK_IM_MODULE=xim \
+    QT_IM_MODULE=fcitx \
+    XMODIFIERS=@im=fcitx \
+    DefalutIMModule=fcitx
+RUN locale-gen ja_JP.UTF-8  
+ENV LANG=ja_JP.UTF-8 \
+    LC_ALL=ja_JP.UTF-8
