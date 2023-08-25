@@ -26,6 +26,7 @@ endif
 	  -e=XDG_RUNTIME_DIR \
 	  -e OPENAI_API_KEY="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" \
 	  --net=host \
+	  --init \
 	  localhost/230805_raspi:1
 
 //pi:
@@ -40,6 +41,7 @@ endif
 	  -e PULSE_COOKIE=/tmp/pulseaudio.cookie \
 	  -e OPENAI_API_KEY="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" \
 	  --net=host \
+	  --init \
 	  localhost/230805_raspi:1
 
 //setup:
