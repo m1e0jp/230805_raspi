@@ -15,6 +15,7 @@
     fi
 
     cd setup
+    rm -rf julius-4.6
     tar zxf julius-v4.6.tar.gz
     cd julius-4.6
     CFLAGS='-O6' ./configure $option
